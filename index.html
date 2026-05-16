@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #1a1928;
+      --bg: #FADADD;
       --surface: #242336;
       --surface2: #2e2c45;
       --accent: #ff6b35;
@@ -477,7 +477,7 @@
  
 <header>
   <div class="header-badge">📖 Dizionario scolastico digitale</div>
-  <h1>Sla<span style="-webkit-text-fill-color:var(--accent2);color:var(--accent2);letter-spacing:0.04em;">n</span>go</h1>
+  <h1>Sla<span id="n-magica" style="-webkit-text-fill-color:var(--accent2);color:var(--accent2);letter-spacing:0.04em;">n</span>go</h1>
   <p class="header-sub">Il dizionario dei neologismi social e gaming</p>
   <div class="stats-bar">
     <div class="stat"><span class="stat-num" id="count-lemmi">2</span>&nbsp;lemmi</div>
@@ -698,6 +698,17 @@
   document.getElementById('modal-close').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+  // ── ANIMAZIONE DELLA N ──────────────────────────────────────
+const nMagica = document.getElementById('n-magica');
+nMagica.style.display = 'inline-block';
+nMagica.style.transition = 'transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+nMagica.style.transform = 'translateY(-120px) rotate(360deg)';
+nMagica.style.opacity = '0';
+
+setTimeout(() => {
+  nMagica.style.opacity = '1';
+  nMagica.style.transform = 'translateY(0) rotate(0deg)';
+}, 300);
 </script>
 </body>
 </html>
