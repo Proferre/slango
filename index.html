@@ -20,9 +20,9 @@
       --radius: 16px;
       --radius-sm: 10px;
     }
-
+ 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
     body {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       background: var(--bg);
@@ -32,7 +32,7 @@
       font-size: 1.05rem;
       line-height: 1.7;
     }
-
+ 
     /* ── NOISE TEXTURE OVERLAY ── */
     body::before {
       content: '';
@@ -43,7 +43,7 @@
       z-index: 0;
       opacity: 0.4;
     }
-
+ 
     /* ── HEADER ── */
     header {
       position: relative;
@@ -51,7 +51,7 @@
       text-align: center;
       overflow: hidden;
     }
-
+ 
     header::before {
       content: '';
       position: absolute;
@@ -61,7 +61,7 @@
       background: radial-gradient(ellipse, rgba(124,58,237,0.3) 0%, rgba(255,107,53,0.15) 50%, transparent 70%);
       pointer-events: none;
     }
-
+ 
     .header-badge {
       display: inline-block;
       background: rgba(255,107,53,0.15);
@@ -76,7 +76,7 @@
       border-radius: 100px;
       margin-bottom: 20px;
     }
-
+ 
     h1 {
       font-family: 'Lexend', sans-serif;
       font-size: clamp(3rem, 8vw, 6rem);
@@ -89,7 +89,7 @@
       background-clip: text;
       margin-bottom: 16px;
     }
-
+ 
     .header-sub {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 1.1rem;
@@ -100,7 +100,7 @@
       margin: 0 auto 40px;
       font-style: italic;
     }
-
+ 
     /* ── STATS BAR ── */
     .stats-bar {
       display: flex;
@@ -109,7 +109,7 @@
       margin-bottom: 50px;
       flex-wrap: wrap;
     }
-
+ 
     .stat {
       display: flex;
       align-items: center;
@@ -117,14 +117,14 @@
       color: var(--text-muted);
       font-size: 0.9rem;
     }
-
+ 
     .stat-num {
       font-family: 'Lexend', sans-serif;
       font-weight: 700;
       font-size: 1.1rem;
       color: var(--accent3);
     }
-
+ 
     .filter-tag {
       display: inline-flex;
       align-items: center;
@@ -141,15 +141,15 @@
       transition: border-color 0.2s, background 0.2s, color 0.2s;
       user-select: none;
     }
-
+ 
     .filter-tag:hover { border-color: var(--accent3); color: var(--text); }
-
+ 
     .filter-tag.active {
       background: rgba(6,214,160,0.12);
       border-color: var(--accent3);
       color: var(--accent3);
     }
-
+ 
     /* ── SEARCH ── */
     .search-wrap {
       max-width: 600px;
@@ -158,7 +158,7 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     .search-icon {
       position: absolute;
       left: 36px;
@@ -167,7 +167,7 @@
       font-size: 1.2rem;
       pointer-events: none;
     }
-
+ 
     #search {
       width: 100%;
       padding: 18px 20px 18px 52px;
@@ -180,13 +180,13 @@
       outline: none;
       transition: border-color 0.25s, box-shadow 0.25s;
     }
-
+ 
     #search::placeholder { color: var(--text-muted); }
     #search:focus {
       border-color: var(--accent);
       box-shadow: 0 0 0 4px rgba(255,107,53,0.12);
     }
-
+ 
     /* ── LISTA ── */
     main {
       max-width: 760px;
@@ -195,7 +195,7 @@
       position: relative;
       z-index: 1;
     }
-
+ 
     .section-label {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 0.78rem;
@@ -205,13 +205,13 @@
       color: var(--text-muted);
       margin-bottom: 24px;
     }
-
+ 
     .grid {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-
+ 
     /* ── VOCE DIZIONARIO ── */
     .card {
       display: flex;
@@ -224,10 +224,10 @@
       border-radius: 6px;
       animation: fadeUp 0.3s ease both;
     }
-
+ 
     .card:first-child { border-top: 1px solid var(--border); }
     .card:hover { background: rgba(255,107,53,0.06); padding-left: 20px; }
-
+ 
     .card-lemma {
       font-family: 'Lexend', sans-serif;
       font-size: 1.1rem;
@@ -237,7 +237,7 @@
       min-width: 160px;
       flex-shrink: 0;
     }
-
+ 
     .card-cat {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 0.85rem;
@@ -245,7 +245,7 @@
       font-style: italic;
       flex-shrink: 0;
     }
-
+ 
     .card-preview {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 0.92rem;
@@ -256,7 +256,7 @@
       text-overflow: ellipsis;
       flex: 1;
     }
-
+ 
     .card-arrow {
       margin-left: auto;
       flex-shrink: 0;
@@ -265,14 +265,14 @@
       opacity: 0;
       transition: opacity 0.15s, color 0.15s;
     }
-
+ 
     .card:hover .card-arrow { opacity: 1; color: var(--accent); }
-
+ 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* ── NO RESULTS ── */
     #no-results {
       display: none;
@@ -280,9 +280,9 @@
       padding: 60px 20px;
       color: var(--text-muted);
     }
-
+ 
     #no-results .emoji { font-size: 3rem; display: block; margin-bottom: 12px; }
-
+ 
     /* ── MODAL ── */
     .modal-overlay {
       display: none;
@@ -295,9 +295,9 @@
       justify-content: center;
       padding: 20px;
     }
-
+ 
     .modal-overlay.open { display: flex; }
-
+ 
     .modal {
       background: var(--surface);
       border: 1.5px solid var(--border);
@@ -310,12 +310,12 @@
       position: relative;
       animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
     }
-
+ 
     @keyframes modalIn {
       from { opacity: 0; transform: scale(0.9) translateY(20px); }
       to   { opacity: 1; transform: scale(1) translateY(0); }
     }
-
+ 
     .modal-close {
       position: absolute;
       top: 16px; right: 16px;
@@ -329,11 +329,11 @@
       display: flex; align-items: center; justify-content: center;
       transition: background 0.2s, color 0.2s;
     }
-
+ 
     .modal-close:hover { background: var(--accent); color: #fff; }
-
+ 
     .modal-header { margin-bottom: 28px; }
-
+ 
     .modal-tag {
       display: inline-flex;
       align-items: center;
@@ -349,7 +349,7 @@
       border-radius: 100px;
       margin-bottom: 14px;
     }
-
+ 
     .modal-lemma {
       font-family: 'Lexend', sans-serif;
       font-size: 2.6rem;
@@ -362,21 +362,21 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
+ 
     .modal-cat {
       font-size: 0.85rem;
       color: var(--text-muted);
       font-style: italic;
     }
-
+ 
     .modal-divider {
       height: 1px;
       background: var(--border);
       margin: 24px 0;
     }
-
+ 
     .modal-field { margin-bottom: 22px; }
-
+ 
     .modal-field-label {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 0.72rem;
@@ -389,26 +389,26 @@
       align-items: center;
       gap: 6px;
     }
-
+ 
     .modal-field-value {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 1rem;
       line-height: 1.75;
       color: var(--text);
     }
-
+ 
     .modal-field-value em {
       color: var(--text-muted);
       font-style: italic;
     }
-
+ 
     /* esempi: uno per riga, solo corsivo, spaziatura 6pt tra voci */
     .esempi-list {
       display: flex;
       flex-direction: column;
       gap: 6px;
     }
-
+ 
     .esempio-item {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 1rem;
@@ -416,14 +416,14 @@
       font-style: italic;
       color: var(--text);
     }
-
+ 
     .tag-list {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 4px;
     }
-
+ 
     .tag-pill {
       background: var(--surface2);
       border: 1px solid var(--border);
@@ -433,7 +433,7 @@
       padding: 4px 12px;
       border-radius: 100px;
     }
-
+ 
     .year-badge {
       display: inline-block;
       background: rgba(124,58,237,0.15);
@@ -445,17 +445,7 @@
       padding: 4px 14px;
       border-radius: 8px;
     }
-/* ── ACCEZIONI ── */
-ol.accezioni {
-  padding-left: 1.2em;
-  margin: 0;
-}
-
-ol.accezioni li {
-  font-style: italic;
-  margin-bottom: 6px;
-  line-height: 1.6;
-}
+ 
     /* ── FOOTER ── */
     footer {
       text-align: center;
@@ -466,14 +456,14 @@ ol.accezioni li {
       position: relative;
       z-index: 1;
     }
-
+ 
     footer strong { color: var(--accent); }
-
+ 
     /* ── SCROLLBAR ── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--surface2); border-radius: 10px; }
-
+ 
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       header { padding: 40px 20px 30px; }
@@ -484,7 +474,7 @@ ol.accezioni li {
   </style>
 </head>
 <body>
-
+ 
 <header>
   <div class="header-badge">📖 Dizionario scolastico digitale</div>
   <h1>Sla<span style="-webkit-text-fill-color:var(--accent2);color:var(--accent2);letter-spacing:0.04em;">n</span>go</h1>
@@ -496,12 +486,12 @@ ol.accezioni li {
     <span class="filter-tag" data-filter="rete">🌐 rete</span>
   </div>
 </header>
-
+ 
 <div class="search-wrap">
   <span class="search-icon">🔍</span>
   <input type="text" id="search" placeholder="Cerca un lemma…" autocomplete="off" />
 </div>
-
+ 
 <main>
   <p class="section-label">Tutti i lemmi — in ordine alfabetico</p>
   <div class="grid" id="grid"></div>
@@ -510,12 +500,12 @@ ol.accezioni li {
     <p>Nessun lemma trovato per "<span id="no-results-query"></span>".</p>
   </div>
 </main>
-
+ 
 <footer>
   <strong>Slango</strong> · Il dizionario dei neologismi social e gaming<br />
-  Progetto didattico della scuola <em>I.C. Città dei Bambini</em> · Tutti i diritti riservati agli autori delle definizioni
+  Progetto didattico · Tutti i diritti riservati agli autori delle definizioni
 </footer>
-
+ 
 <!-- MODAL -->
 <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
   <div class="modal" id="modal">
@@ -548,7 +538,7 @@ ol.accezioni li {
     </div>
   </div>
 </div>
-
+ 
 <script>
   // ── DATI ──────────────────────────────────────────────────────────────────
   // Per aggiungere un lemma, copia un blocco { ... }, incollalo in fondo
@@ -579,31 +569,28 @@ ol.accezioni li {
       lemma: "Skippare",
       ambito: ["gaming", "rete", "social"],
       categoria: "verbo transitivo (1ª coniugazione)",
-      definizione:  `<ol class="accezioni">
-                      <li>Saltare dei contenuti digitali.</li>
-                      <li>Evitare un evento.</li>
-                    </ol>`,
+      definizione: `<ol class="accezioni"><li>Saltare dei contenuti digitali.</li><li>Evitare un evento.</li></ol>`,
       etimologia: "Dalla radice <em>(to) skip</em> con l'aggiunta del suffisso italiano <em>-are</em>.",
       esempi: ["Skippare una pubblicità.", "Skippare una festa."],
       sinonimi: [],
       attestazione: ""
     }
   ];
-
+ 
   // ── ORDINAMENTO ALFABETICO ────────────────────────────────────────────────
   lemmi.sort((a, b) => a.lemma.localeCompare(b.lemma, 'it'));
-
+ 
   // ── STATO FILTRO (multi-selezione) ───────────────────────────────────────
   let activeFilters = new Set();
-
+ 
   // ── RENDER LISTA ─────────────────────────────────────────────────────────
   const grid = document.getElementById('grid');
   const noResults = document.getElementById('no-results');
   const noResultsQ = document.getElementById('no-results-query');
   const countEl = document.getElementById('count-lemmi');
-
+ 
   countEl.textContent = lemmi.length;
-
+ 
   function renderGrid(filtered) {
     grid.innerHTML = '';
     if (filtered.length === 0) {
@@ -615,17 +602,18 @@ ol.accezioni li {
       const card = document.createElement('div');
       card.className = 'card';
       card.style.animationDelay = `${i * 0.05}s`;
+      const previewText = l.definizione.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
       card.innerHTML = `
         <div class="card-lemma">${l.lemma}</div>
         <div class="card-cat">${l.categoria}</div>
-        <div class="card-preview">${l.definizione}</div>
+        <div class="card-preview">${previewText}</div>
         <div class="card-arrow">→</div>
       `;
       card.addEventListener('click', () => openModal(l));
       grid.appendChild(card);
     });
   }
-
+ 
   function applyFilters() {
     const q = document.getElementById('search').value.trim().toLowerCase();
     let filtered = lemmi;
@@ -642,9 +630,9 @@ ol.accezioni li {
     }
     renderGrid(filtered);
   }
-
+ 
   renderGrid(lemmi);
-
+ 
   // ── FILTRI CLICCABILI (multi-selezione) ──────────────────────────────────
   document.querySelectorAll('.filter-tag').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -659,13 +647,13 @@ ol.accezioni li {
       applyFilters();
     });
   });
-
+ 
   // ── RICERCA ───────────────────────────────────────────────────────────────
   document.getElementById('search').addEventListener('input', applyFilters);
-
+ 
   // ── MODAL ─────────────────────────────────────────────────────────────────
   const overlay = document.getElementById('modal-overlay');
-
+ 
   function openModal(l) {
     // Ambito: ordinato alfabeticamente, ogni tag cliccabile
     const ambitoSorted = [...l.ambito].sort((a,b) => a.localeCompare(b,'it'));
@@ -684,29 +672,29 @@ ol.accezioni li {
         applyFilters();
       });
     });
-
+ 
     document.getElementById('m-lemma').textContent = l.lemma;
     document.getElementById('m-cat').textContent = l.categoria;
     document.getElementById('m-def').innerHTML = l.definizione;
     document.getElementById('m-etim').innerHTML = l.etimologia;
-
+ 
     // Esempi: array → uno per riga in corsivo
     const esempiEl = document.getElementById('m-esempi');
     const esArr = Array.isArray(l.esempi) ? l.esempi : [l.esempi];
     esempiEl.innerHTML = `<div class="esempi-list">${esArr.map(e => `<span class="esempio-item">${e}</span>`).join('')}</div>`;
-
+ 
     document.getElementById('m-anno').textContent = l.attestazione;
     const sinEl = document.getElementById('m-sin');
     sinEl.innerHTML = l.sinonimi.map(s => `<span class="tag-pill">${s}</span>`).join('');
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
+ 
   function closeModal() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
   }
-
+ 
   document.getElementById('modal-close').addEventListener('click', closeModal);
   overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
