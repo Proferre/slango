@@ -445,7 +445,17 @@
       padding: 4px 14px;
       border-radius: 8px;
     }
+/* ── ACCEZIONI ── */
+ol.accezioni {
+  padding-left: 1.2em;
+  margin: 0;
+}
 
+ol.accezioni li {
+  font-style: italic;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
     /* ── FOOTER ── */
     footer {
       text-align: center;
@@ -503,7 +513,7 @@
 
 <footer>
   <strong>Slango</strong> · Il dizionario dei neologismi social e gaming<br />
-  Progetto didattico · Tutti i diritti riservati agli autori delle definizioni
+  Progetto didattico della scuola <em>I.C. Città dei Bambini</em> · Tutti i diritti riservati agli autori delle definizioni
 </footer>
 
 <!-- MODAL -->
@@ -548,7 +558,7 @@
     {
       lemma: "Ghostare",
       ambito: ["media", "rete"],
-      categoria: "verbo (1ª coniugazione)",
+      categoria: "verbo transitivo (1ª coniugazione)",
       definizione: "Interrompere improvvisamente e senza alcuna spiegazione ogni forma di comunicazione con una persona, ignorandola deliberatamente come se non esistesse più.",
       etimologia: "Prestito parzialmente adattato dal verbo inglese <em>(to) ghost</em> con l'aggiunta del suffisso italiano <em>-are</em> della prima coniugazione.",
       esempi: ["Ti ho scritto l'altro giorno ma mi hai ghostato.", "Non ghostare le persone: è maleducato!"],
@@ -557,13 +567,26 @@
     },
     {
       lemma: "Loggare",
-      ambito: ["gaming", "rete"],
-      categoria: "verbo (1ª coniugazione)",
-      definizione: "Effettuare l'accesso a una piattaforma digitale, a un videogioco online o a un servizio web inserendo le proprie credenziali. Per estensione, entrare in un ambiente virtuale o in una sessione di gioco.",
-      etimologia: "Adattamento dell'espressione inglese <em>to log in</em> (accedere) con l'aggiunta del suffisso verbale italiano <em>-are</em>. Il sostantivo <em>log</em> indica in origine il registro di bordo delle navi.",
-      esempi: ["Lóggati subito, stiamo aspettando solo te per iniziare la partita!", "Non riesco a loggarmi, il server è giù."],
-      sinonimi: ["Accedere", "Entrare", "Autenticarsi", "Fare il login"],
-      attestazione: "2000 ca."
+      ambito: ["gaming", "rete", "social"],
+      categoria: "verbo intransitivo (1ª coniugazione)",
+      definizione: "Termine giovanile per dire <em>accedere</em> in un sistema informatico o in un sito web.",
+      etimologia: "Dalla radice <em>(to) log</em> con l'aggiunta del suffisso italiano <em>-are</em>.",
+      esempi: ["Loggare a un gioco.", "Loggare su un'app."],
+      sinonimi: [],
+      attestazione: ""
+    }
+    {
+      lemma: "Skippare",
+      ambito: ["gaming", "rete", "social"],
+      categoria: "verbo transitivo (1ª coniugazione)",
+      definizione:  `<ol class="accezioni">
+                      <li>Saltare dei contenuti digitali.</li>
+                      <li>Evitare un evento.</li>
+                    </ol>`,
+      etimologia: "Dalla radice <em>(to) skip</em> con l'aggiunta del suffisso italiano <em>-are</em>.",
+      esempi: ["Skippare una pubblicità.", "Skippare una festa."],
+      sinonimi: [],
+      attestazione: ""
     }
   ];
 
